@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.QualitydemyPage;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class C04_NegativeLoginTesti {
     // 3 test method'u olusturun
@@ -22,7 +23,7 @@ public class C04_NegativeLoginTesti {
         qualitydemyPage.passwordKutusu.sendKeys("31488081");
         qualitydemyPage.loginButonu.click();
 
-        Assert.assertTrue(qualitydemyPage.kullanıcıEmailKutusu.isDisplayed());
+        Assert.assertTrue(qualitydemyPage.kullaniciEmailKutusu.isDisplayed());
         Driver.closeDriver();
     }
 
@@ -35,7 +36,7 @@ public class C04_NegativeLoginTesti {
         qualitydemyPage.passwordKutusu.sendKeys("123456");
         qualitydemyPage.loginButonu.click();
 
-        Assert.assertTrue(qualitydemyPage.kullanıcıEmailKutusu.isDisplayed());
+        Assert.assertTrue(qualitydemyPage.kullaniciEmailKutusu.isDisplayed());
         Driver.closeDriver();
 
     }
@@ -49,7 +50,7 @@ public class C04_NegativeLoginTesti {
         qualitydemyPage.passwordKutusu.sendKeys("123456");
         qualitydemyPage.loginButonu.click();
 
-        Assert.assertTrue(qualitydemyPage.kullanıcıEmailKutusu.isDisplayed());
+        Assert.assertTrue(qualitydemyPage.kullaniciEmailKutusu.isDisplayed());
         Driver.closeDriver();
     }
 }

@@ -9,29 +9,29 @@ import utilities.Driver;
 
 public class QualitydemyPage {
 
-    public Alert kullaniciEmailKutusu;
-    public WebElement basariliGirisCoursesLinki;
-    public Alert passwordKutusu;
-    public HTMLInputElement loginButonu;
+
 
     public QualitydemyPage(){
         PageFactory.initElements(Driver.getDriver(),this);
 
 
     }
-    @FindBy(xpath ="//*[text()='Log in]" )
+    @FindBy(xpath = "//*[text()='Log in']")
     public WebElement ilkLoginLinki;
 
-    @FindBy(id = "login-email")
-    public WebElement kullanıcıEmailKutusu;
+    @FindBy(id="login-email")
+    public WebElement kullaniciEmailKutusu;
 
-    @FindBy(id ="login-password" )
-    public WebElement posworKutusu;
+    @FindBy (id = "login-password")
+    public WebElement passwordKutusu;
 
-    @FindBy(id = "//button[text()='Login']")
-    public WebElement loginKutusu;
+    @FindBy(xpath = "//button[@class='btn red radius-5 mt-4 w-100']")
+    public WebElement loginButonu;
 
     @FindBy(linkText = "My courses")
-    public WebElement basşarılıGirişLinlki;
+    public WebElement basariliGirisCoursesLinki;
+
+    @FindBy (xpath = "//*[text()='Accept']")
+    public WebElement cookieKabul;
 
 }

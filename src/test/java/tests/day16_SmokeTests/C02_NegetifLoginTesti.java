@@ -20,13 +20,16 @@ public class C02_NegetifLoginTesti {
     @Test
     public void yanlisEmailTesti(){
 
+
         Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
         qualitydemyPage.ilkLoginLinki.click();
         qualitydemyPage.kullaniciEmailKutusu.sendKeys(ConfigReader.getProperty("qdGecersizUsername"));
         qualitydemyPage.passwordKutusu.sendKeys(ConfigReader.getProperty("qdGecerliPassword"));
+        qualitydemyPage.cookieKabul.click();
+        ReusableMethods.bekle(2);
         qualitydemyPage.loginButonu.click();
 
-        Assert.assertTrue(qualitydemyPage.kullanıcıEmailKutusu.isDisplayed());
+        Assert.assertTrue(qualitydemyPage.kullaniciEmailKutusu.isDisplayed());
 
         ReusableMethods.bekle(3);
         Driver.closeDriver();
@@ -39,9 +42,11 @@ public class C02_NegetifLoginTesti {
         qualitydemyPage.ilkLoginLinki.click();
         qualitydemyPage.kullaniciEmailKutusu.sendKeys(ConfigReader.getProperty("qdGecerliUsername"));
         qualitydemyPage.passwordKutusu.sendKeys(ConfigReader.getProperty("qdGecersizPassword"));
-        qualitydemyPage.loginButonu.click();
+        qualitydemyPage.cookieKabul.click();
+        ReusableMethods.bekle(2);
+       qualitydemyPage.loginButonu.click();
 
-        Assert.assertTrue(qualitydemyPage.kullanıcıEmailKutusu.isDisplayed());
+        Assert.assertTrue(qualitydemyPage.kullaniciEmailKutusu.isDisplayed());
 
         ReusableMethods.bekle(3);
         Driver.closeDriver();
@@ -57,9 +62,11 @@ public class C02_NegetifLoginTesti {
         qualitydemyPage.ilkLoginLinki.click();
         qualitydemyPage.kullaniciEmailKutusu.sendKeys(ConfigReader.getProperty("qdGecersizUsername"));
         qualitydemyPage.passwordKutusu.sendKeys(ConfigReader.getProperty("qdGecersizPassword"));
+        qualitydemyPage.cookieKabul.click();
+        ReusableMethods.bekle(2);
         qualitydemyPage.loginButonu.click();
 
-        Assert.assertTrue(qualitydemyPage.kullanıcıEmailKutusu.isDisplayed());
+        Assert.assertTrue(qualitydemyPage.kullaniciEmailKutusu.isDisplayed());
 
         ReusableMethods.bekle(3);
         Driver.closeDriver();
